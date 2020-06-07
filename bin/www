@@ -7,7 +7,7 @@ var https = require('https');
 var fs = require('fs');
 
 
-var port = normalizePort(process.env.PORT || '3478');
+var port = normalizePort(process.env.PORT || '8080');
 
 app.set('port', port);
 

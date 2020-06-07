@@ -53,10 +53,10 @@ app.io.on('connect',function(socket){
     console.log('Client ' + socket.id +  ' say: ',message);
     socket.broadcast.emit('message',message);
   });
-  socket.on('signal',(toId,message)=>{
+  socket.on('signal',(toId,msg)=>{
     console.log('toID: '+ toId);
-    console.log('Message: ' + message);
-    app.io.to(toId).emit('signal',socket.id,message);
+    console.log('Message: ' + msg);
+    app.io.to(toId).emit('signal',socket.id,msg);
   });
 
   app.io.emit('join', socket.id, app.io.engine.clientsCount, Object.keys(app.io.sockets.clients().sockets));
@@ -68,7 +68,7 @@ app.io.on('connect',function(socket){
 
   socket.on('chatMessage',function(msg){
     console.log('ID : ' + socket.id +' : '+ msg );
-    app.io.emit('recMsg', {comment: socket.id + " : " + msg.comment});
+    app.io.emit('Msg', {comment: socket.id + " : " + msg.comment});
   });
 
 });
