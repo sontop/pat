@@ -17,7 +17,7 @@
     "morgan": "~1.9.1",
     "mysql": "^2.18.1",
     "serve-favicon": "^2.5.0",
-    "socket.io": "^2.3.0",
+    "socket.io": "^2.5.0",
     "websocket": "^1.0.31",
     "yarn": "^1.22.4"
   }
